@@ -174,9 +174,7 @@ function logger(func, logFunc) {
  */
 function partialUsingArguments(fn, ...args1) {
   // throw new Error('Not implemented');
-  return function (...args2) {
-    return fn(...args1, ...args2);
-  };
+  return (...args2) => fn(...args1, ...args2);
 }
 
 
